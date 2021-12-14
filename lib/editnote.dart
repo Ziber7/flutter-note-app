@@ -53,6 +53,7 @@ class _editnoteState extends State<editnote> {
         child: Column(
           children: [
             Container(
+              padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
               decoration: BoxDecoration(border: Border.all()),
               child: TextField(
                 controller: title,
@@ -66,6 +67,7 @@ class _editnoteState extends State<editnote> {
             ),
             Expanded(
               child: Container(
+                padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
                 decoration: BoxDecoration(border: Border.all()),
                 child: TextField(
                   controller: content,

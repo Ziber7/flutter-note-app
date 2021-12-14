@@ -21,7 +21,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "To Do App",
+      title: "TasKu",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Colors.blue[900],
@@ -50,11 +50,12 @@ class _HomeState extends State<Home> {
             context, MaterialPageRoute(builder: (_) => addnote()));
         },
         child: Icon(
-          Icons.add,
+          Icons.note_add_rounded,
         ),
       ),
       appBar: AppBar(
-        title: Text('To Do App'),
+        centerTitle: true,
+        title: Text('TasKu'),
       ),
       body: StreamBuilder(
         stream: _userStream,
@@ -92,30 +93,32 @@ class _HomeState extends State<Home> {
                       ),
                       Padding(
                         padding: EdgeInsets.only(
-                          left: 3,
-                          right: 3,
+                          left: 8,
+                          right: 8,
                         ),
                         child: ListTile(
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10),
                             side: BorderSide(
-                              color: Colors.black,
+                              color: Colors.blue,
                             ),
                           ),
                           title: Text(
                             snapshot.data!.docChanges[index].doc['title'],
                             style: TextStyle(
-                              fontSize: 20,
+                              fontSize: 12,
+                              color: Colors.blue[600],
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
                           subtitle: Text(
                             snapshot.data!.docChanges[index].doc['content'],
                             style: TextStyle(
-                              fontSize: 15,
+                              fontSize: 10,
                             ),
                           ),
                           contentPadding: EdgeInsets.symmetric(
-                            vertical: 12,
+                            vertical: 0,
                             horizontal: 16,
                           ),
                         ),

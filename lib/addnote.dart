@@ -32,8 +32,10 @@ class addnote extends StatelessWidget {
       ),
       body: Container(
         child: Column(
+          
           children: [
             Container(
+              padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
               decoration: BoxDecoration(border: Border.all()),
               child: TextField(
                 controller: title,
@@ -47,6 +49,7 @@ class addnote extends StatelessWidget {
             ),
             Expanded(
               child:Container(
+                padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
                 decoration: BoxDecoration(border: Border.all()),
                 child: TextField(
                   controller: content,
@@ -60,6 +63,7 @@ class addnote extends StatelessWidget {
             ),
           ],
         ),
+        
       ),
     );
   }

@@ -36,7 +36,13 @@ class _editnoteState extends State<editnote> {
                   context, MaterialPageRoute(builder: (_) => Home()));
               });
             },
-            child: Text("save"),
+            child: Text("Save",
+            style: 
+                TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+            ),
           ),
           MaterialButton(
             onPressed: () {
@@ -45,7 +51,13 @@ class _editnoteState extends State<editnote> {
                   context, MaterialPageRoute(builder: (_) => Home()));
               });
             },
-            child: Text("delete"),
+            child: Text("Delete",
+            style: 
+                TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+            ),
           )
         ],
       ),

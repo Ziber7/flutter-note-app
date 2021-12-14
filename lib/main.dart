@@ -56,6 +56,7 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         centerTitle: true,
         title: Text('TasKu'),
+        automaticallyImplyLeading: false,
       ),
       body: StreamBuilder(
         stream: _userStream,

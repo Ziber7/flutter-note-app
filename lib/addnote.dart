@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'main.dart';
 
 class addnote extends StatelessWidget {
+
   TextEditingController title = TextEditingController();
   TextEditingController content = TextEditingController();
 
@@ -13,6 +14,7 @@ class addnote extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: true,
         actions: [
           MaterialButton(
             onPressed: () {
@@ -25,7 +27,12 @@ class addnote extends StatelessWidget {
               });
             },
             child: Text(
-              "save",
+              "Save",
+              style: 
+                TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
             ),
           ),
         ],
@@ -68,3 +75,4 @@ class addnote extends StatelessWidget {
     );
   }
 }
+
